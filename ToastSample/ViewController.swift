@@ -37,7 +37,6 @@ class ViewController: UIViewController {
     }
 }
 
-
 // MARK: -- ViewController Extensiion
 extension ViewController{
     
@@ -55,7 +54,6 @@ extension ViewController{
         toastLabel.numberOfLines = 2
         toastLabel.text = message
         self.view.addSubview(toastLabel)
-        
         
         UIView.animate(withDuration: duration, delay: 1.0, options: .curveEaseInOut, animations: {
             toastLabel.alpha = 0.0
