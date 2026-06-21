@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     // MARK: -- IB Outlests
     @IBOutlet weak var showToastButton: UIButton!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     // MARK: -- Show Toast Button Action
     @IBAction func showToast(_ sender: Any) {
-        showToastWithMessage(message: "This is a simple toast.", duration: 1.0)
+        showToastWithMessage(message: "This is a simple toast.", duration: 2)
     }
 }
 
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 extension ViewController{
     
     // MARK: -- Show Toast Message
-    func showToastWithMessage(message : String, duration: Double){
+    func showToastWithMessage(message : String, duration: Double?){
         
         let toastLabel = UILabel(frame: CGRect(x: 30, y: 0, width: self.view.frame.size.width - 60, height: 40))
         toastLabel.center.y = self.view.frame.size.height - 70
@@ -55,7 +55,7 @@ extension ViewController{
         toastLabel.text = message
         self.view.addSubview(toastLabel)
         
-        UIView.animate(withDuration: duration, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: duration ?? 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             toastLabel.alpha = 0.0
         }) { (iscompleted) in
             toastLabel.removeFromSuperview()
