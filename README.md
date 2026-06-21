@@ -1,4 +1,4 @@
-# iOS Simple Toast Demo
+# iOS Simple Toast Demo (Swift)
 
 Apple does not have native toast UI control like android. There are lots or thirdparty dependency libraries to create Toast in iOS. But we can create one ourself easily.
 
